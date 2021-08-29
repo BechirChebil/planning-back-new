@@ -39,6 +39,8 @@ public class PlanningService implements IPlanningService{
     	Planning planningCopy = new Planning();
     	planningCopy.setTitre(planning.getTitre().concat("(copie)"));
     	planningCopy.setStartTime(planning.getStartTime());
+    	planningCopy.setIntroduction(planning.getIntroduction());
+    	planningCopy.setSujet(planning.getSujet());
         IPlanningRepository.save(planningCopy);
         
     	List<Seance> seances = (List<Seance>) planning.getSeances();
